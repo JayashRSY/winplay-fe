@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <mat-card class="px-3 py-2 text-center">
+
+            <div class="text-center">
+                Pay on QR Code below.
+                <img class="qr-img"
+                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngmart.com%2Ffiles%2F10%2FQr-Code-Transparent-PNG.png&f=1&nofb=1&ipt=e1d65d5c835fb83a12fca22acb4f83c86021596d1c1f4b3ca0f9bc670b9c5d87&ipo=images"
+                    alt="">
+            </div>
+            <div class="row justify-content-center"><strong>OR</strong></div>
+            <div>
+                Pay on UPI ID: <strong>test@upi</strong>
+            </div>
+        </mat-card>
+        <mat-card>
+            <mat-card-content>
+                <form [formGroup]="form" class="d-flex flex-column justify-content-center">
+                    <div class="form-group">
+                        <mat-form-field class="w-100">
+                            <mat-label>UPI reference No.</mat-label>
+                            <input matInput
+                                formControlName="paymentId"
+                                placeholder="UPI reference No.">
+                        </mat-form-field>
+                    </div>
+                    <div class="form-group">
+                        <mat-form-field  class="w-100">
+                            <mat-label>Amount</mat-label>
+                            <input matInput
+                                type="number"
+                                formControlName="amount"
+                                placeholder="Amount">
+                        </mat-form-field>
+                    </div>
+                    <button mat-raised-button
+                        color="primary"
+                        (click)="onSubmit()">Submit</button>
+                </form>
+
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+</div>

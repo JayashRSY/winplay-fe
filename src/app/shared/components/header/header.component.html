@@ -1,0 +1,164 @@
+<mat-toolbar color="primary"
+    class="d-flex justify-content-between align-items-center">
+    <button mat-icon-button
+        aria-label="Menu icon"
+        (click)="toggleMenu()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="d-flex justify-content-center align-items-center">
+        <span routerLink="/"
+            class="cursor-pointer">WinPlay</span>
+    </span>
+    <span *ngIf="!(loginData$ | async) as loginData"
+        class="d-flex justify-content-center align-items-center">
+        <button mat-icon-button
+            routerLink="/login">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+    </span>
+    <span *ngIf="loginData$ | async as loginData"
+        class="d-flex justify-content-center align-items-center"
+        title="Profile">
+        <button mat-icon-button
+            routerLink="/profile">
+            <img [src]="loginData.profilePicture"
+                alt=""
+                class="prfile-img">
+        </button>
+    </span>
+</mat-toolbar>
+<mat-sidenav-container autosize>
+    <mat-sidenav #sidenav
+        [ngClass]="!isCollapsed ? 'expanded' : ''"
+        [mode]="isMobile ? 'over' : 'side'"
+        [opened]="isMobile ? 'false' : 'true'">
+        <mat-nav-list>
+            <ng-container *ngIf="loginData$ | async as loginData">
+                <a mat-list-item
+                    routerLink="/admin"
+                    routerLinkActive="active"
+                    (click)="isMobile && toggleMenu()"
+                    *ngIf="loginData.role==='admin'">
+                    <span class="entry">
+                        <mat-icon>supervised_user_circle</mat-icon>
+                        <span *ngIf="!isCollapsed">Admin</span>
+                    </span>
+                </a>
+                <mat-divider></mat-divider>
+            </ng-container>
+            <ng-container *ngIf="loginData$ | async as loginData">
+                <a mat-list-item
+                    routerLink="/play"
+                    routerLinkActive="active"
+                    (click)="isMobile && toggleMenu()">
+                    <span class="entry">
+                        <mat-icon>play_arrow</mat-icon>
+                        <span *ngIf="!isCollapsed">Play</span>
+                    </span>
+                </a>
+                <mat-divider></mat-divider>
+            </ng-container>
+            <ng-container *ngIf="loginData$ | async as loginData">
+                <a mat-list-item
+                    routerLink="/profile"
+                    routerLinkActive="active"
+                    (click)="isMobile && toggleMenu()">
+                    <span class="entry">
+                        <mat-icon>person</mat-icon>
+                        <span *ngIf="!isCollapsed">Profile</span>
+                    </span>
+                </a>
+                <mat-divider></mat-divider>
+            </ng-container>
+            <ng-container *ngIf="loginData$ | async as loginData">
+                <a mat-list-item
+                    routerLink="/wallet"
+                    routerLinkActive="active"
+                    (click)="isMobile && toggleMenu()">
+                    <span class="entry">
+                        <mat-icon>account_balance_wallet</mat-icon>
+                        <span *ngIf="!isCollapsed">Wallet</span>
+                    </span>
+                </a>
+                <mat-divider></mat-divider>
+            </ng-container>
+            <ng-container *ngIf="loginData$ | async as loginData">
+                <a mat-list-item
+                    routerLink="/transactions"
+                    routerLinkActive="active"
+                    (click)="isMobile && toggleMenu()">
+                    <span class="entry">
+                        <mat-icon>description</mat-icon>
+                        <span *ngIf="!isCollapsed">Transactions</span>
+                    </span>
+                </a>
+                <mat-divider></mat-divider>
+            </ng-container>
+            <ng-container *ngIf="loginData$ | async as loginData">
+                <a mat-list-item
+                    routerLink="/refer"
+                    routerLinkActive="active"
+                    (click)="isMobile && toggleMenu()">
+                    <span class="entry">
+                        <mat-icon>people</mat-icon>
+                        <span *ngIf="!isCollapsed">Refer & Earn</span>
+                    </span>
+                </a>
+                <mat-divider></mat-divider>
+            </ng-container>
+            <ng-container *ngIf="loginData$ | async as loginData">
+                <a mat-list-item
+                    routerLink="/chat"
+                    routerLinkActive="active"
+                    (click)="isMobile && toggleMenu()">
+                    <span class="entry">
+                        <mat-icon>chat</mat-icon>
+                        <span *ngIf="!isCollapsed">Chat with Us</span>
+                    </span>
+                </a>
+                <mat-divider></mat-divider>
+            </ng-container>
+            <ng-container *ngIf="!(loginData$ | async) as loginData">
+                <a mat-list-item
+                    routerLink="/login"
+                    routerLinkActive="active"
+                    (click)="isMobile && toggleMenu()">
+                    <span class="entry">
+                        <mat-icon>login</mat-icon>
+                        <span *ngIf="!isCollapsed">Login</span>
+                    </span>
+                </a>
+                <mat-divider></mat-divider>
+            </ng-container>
+            <ng-container *ngIf="!(loginData$ | async) as loginData">
+                <a mat-list-item
+                    routerLink="/signup"
+                    routerLinkActive="active"
+                    (click)="isMobile && toggleMenu()">
+                    <span class="entry">
+                        <mat-icon>person_add</mat-icon>
+                        <span *ngIf="!isCollapsed">Signup</span>
+                    </span>
+                </a>
+                <mat-divider></mat-divider>
+            </ng-container>
+            <ng-container *ngIf="loginData$ | async as loginData">
+                <a mat-list-item
+                    (click)="onLogout()">
+                    <span class="entry">
+                        <mat-icon>logout</mat-icon>
+                        <span *ngIf="!isCollapsed">Logout</span>
+                    </span>
+                </a>
+                <mat-divider></mat-divider>
+            </ng-container>
+        </mat-nav-list>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div [ngClass]="isMobile ? 'p-2' : 'p-5'"
+            class="mt-2">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

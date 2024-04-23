@@ -1,0 +1,63 @@
+<form [formGroup]="signupForm"
+    (ngSubmit)="onSignup()"
+    class="d-flex flex-column align-items-center">
+    <mat-card class="signup-card">
+        <mat-card-header class="text-center">
+            <mat-card-title>Sign Up</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="row">
+            <mat-form-field appearance="fill"
+                class="input-field">
+                <mat-label>Username</mat-label>
+                <input matInput
+                    placeholder="Enter your username"
+                    formControlName="username">
+                <mat-error *ngIf="signupForm.get('username').invalid && signupForm.get('username').touched">
+                    Please enter a username.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill"
+                class="input-field">
+                <mat-label>Email</mat-label>
+                <input matInput
+                    type="email"
+                    placeholder="Enter your email"
+                    formControlName="email">
+                <mat-error *ngIf="signupForm.get('email').invalid && signupForm.get('email').touched">
+                    Please enter a valid email address.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill"
+                class="input-field">
+                <mat-label>Mobile No.</mat-label>
+                <input matInput
+                    type="number"
+                    placeholder="Enter your mobile number"
+                    formControlName="mobile">
+                <mat-error *ngIf="signupForm.get('mobile').invalid && signupForm.get('mobile').touched">
+                    Please enter a valid mobile number.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill"
+                class="input-field">
+                <mat-label>Password</mat-label>
+                <input matInput
+                    type="password"
+                    placeholder="Enter your password"
+                    formControlName="password">
+                <mat-error *ngIf="signupForm.get('password').invalid && signupForm.get('password').touched">
+                    Please enter a password.
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button
+                color="primary"
+                type="submit"
+                [disabled]="signupForm.invalid"
+                class="submit-button">Sign Up</button>
+        </mat-card-content>
+    </mat-card>
+</form>
+
+<div class="d-flex justify-content-center m-5">
+    <app-social-auth></app-social-auth>
+</div>

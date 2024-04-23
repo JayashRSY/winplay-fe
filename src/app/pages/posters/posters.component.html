@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-9">
+        <div class="row">
+            <app-poster-card *ngFor="let poster of posters"
+                [poster]="poster"></app-poster-card>
+        </div>
+    </div>
+</div>

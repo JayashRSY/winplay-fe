@@ -1,0 +1,40 @@
+<div class="container">
+    <h2 class="heading">Edit Profile</h2>
+    <form [formGroup]="profileForm"
+        class="profile-form"
+        (ngSubmit)="saveProfile()">
+        <mat-form-field class="input-field">
+            <input matInput
+                placeholder="Username"
+                formControlName="username"
+                required>
+        </mat-form-field>
+        <mat-form-field class="input-field">
+            <input matInput
+                placeholder="Email"
+                formControlName="email"
+                required>
+        </mat-form-field>
+        <mat-form-field class="input-field">
+            <input matInput
+                placeholder="Mobile"
+                formControlName="mobile">
+        </mat-form-field>
+        <mat-form-field class="input-field">
+            <input matInput
+                placeholder="UPI ID"
+                formControlName="upiId">
+        </mat-form-field>
+        <mat-form-field class="input-field">
+            <input matInput
+                placeholder="Password"
+                formControlName="password"
+                type="password"
+                required>
+        </mat-form-field>
+        <!-- Add other fields as needed -->
+        <button mat-raised-button
+            color="primary"
+            type="submit">Save</button>
+    </form>
+</div>

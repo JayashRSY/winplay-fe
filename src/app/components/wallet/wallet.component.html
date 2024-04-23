@@ -1,0 +1,42 @@
+<div class="container">
+    <mat-card class="wallet-card">
+        <mat-card-header class="text-center">
+            <h1 class="balance"
+                *ngIf="loginData$ | async as loginData">
+                <strong>₹{{loginData.walletBalance}}</strong>
+            </h1>
+            <p>Wallet Balance</p>
+        </mat-card-header>
+        <mat-card-content class="d-flex justify-content-end">
+            <button mat-raised-button
+                color="accent"
+                routerLink="/withdraw">Withdraw</button>
+            <button mat-raised-button
+                class="ms-2"
+                color="primary"
+                routerLink="/recharge">Deposit</button>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<div class="container">
+    <h2 class="heading">My Requests</h2>
+    <mat-grid-list cols="1"
+        rowHeight="150px">
+        <mat-grid-tile *ngFor="let request of requests">
+            <mat-card class="request-card">
+                <mat-card-header>
+                    <mat-icon>{{ request.type === 'deposit' ? 'arrow_downward' : 'arrow_upward' }}</mat-icon>
+
+                    <mat-card-title>{{ request.type }}</mat-card-title>
+                    <mat-card-subtitle>{{ request.date | date: 'medium' }}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p class="amount">Amount: ₹{{ request.amount }}</p>
+                    <p class="status">Status: {{ request.status }}</p>
+                    <!-- Add MatIcons for deposit and withdrawal -->
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

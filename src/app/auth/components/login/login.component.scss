@@ -1,0 +1,860 @@
+// @font-face { 
+//   font-family:"proxima-nova";
+//   src:url("https://use.typekit.net/af/cebe0e/00000000000000003b9b3060/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/cebe0e/00000000000000003b9b3060/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/cebe0e/00000000000000003b9b3060/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+//   font-display:swap;
+//   font-style:normal;
+//   font-weight:300;
+//   font-stretch:normal;
+// } 
+//   body {  
+//     font:inherit;
+//     line-height:1.15;
+//     font-size:16px;
+//     font-family:proxima-nova, Corbel, Arial, sans-serif;
+//   }  
+// @media not print{     
+//   body {  
+//     font-family:proxima-nova,Corbel,Arial,sans-serif;
+//     font-weight:300;
+//     font-size:16px;
+//     color:#000;
+//   }  
+// }  
+// * { 
+//     box-sizing: border-box;
+// } 
+
+// div { 
+//     margin: 0; 
+//     padding: 0; 
+//     border: 0;
+// } 
+
+// div { 
+//     margin: 0px; 
+//     padding: 0px; 
+//     border: 0px; 
+//     font: inherit; 
+//     vertical-align: baseline;
+// } 
+
+// @media not print{ 
+//   body { 
+//     font-family: proxima-nova,Corbel,Arial,sans-serif; 
+//     font-weight: 300; 
+//     font-size: 16px; 
+//     color: #000;
+//   } 
+// }     
+
+// body { 
+//     margin: 0;
+// } 
+
+// body { 
+//     margin: 0; 
+//     padding: 0; 
+//     border: 0;
+// } 
+
+// body { 
+//     background-color: #fff; 
+//     font-variant-numeric: lining-nums; 
+//     font-feature-settings: 'lnum' on; 
+//     -webkit-font-smoothing: antialiased; 
+//     position: relative;
+// } 
+
+// body { 
+//     margin: 0px; 
+//     padding: 0px; 
+//     border: 0px; 
+//     font: inherit; 
+//     vertical-align: baseline;
+// } 
+
+// body { 
+//     line-height: 1;
+// } 
+
+// body { 
+//     font-size: 16px; 
+//     font-family: proxima-nova, Corbel, Arial, sans-serif;
+// } 
+
+// html { 
+//     line-height: 1.15; 
+//     -webkit-text-size-adjust: 100%;
+// } 
+
+// html { 
+//     margin: 0; 
+//     padding: 0; 
+//     border: 0;
+// } 
+
+// html { 
+//     margin: 0px; 
+//     padding: 0px; 
+//     border: 0px; 
+//     font: inherit; 
+//     vertical-align: baseline;
+// } 
+
+// .container-q3e { 
+//     width: 100%; 
+//     max-width: 1270px; 
+//     margin: 0 auto; 
+//     padding: 0 15px;
+// } 
+
+// :before, * ::after { 
+//     box-sizing: border-box;
+// } 
+
+// *,:before,:after { 
+//     box-sizing: border-box;
+// } 
+
+// ::before, * ::after { 
+//     box-sizing: border-box;
+// } 
+
+// .content-f98 { 
+//     margin-top: 40px; 
+//     margin-bottom: 40px; 
+//     display: flex; 
+//     flex-wrap: wrap; 
+//     justify-content: space-between; 
+//     position: relative; 
+//     z-index: 1;
+// } 
+
+// .content-f98 .login-xea  { 
+//     border: 1px solid #d2d2d2; 
+//     box-shadow: 0 0 35px rgba(0,0,0,.2); 
+//     background-color: #f5f5f5; 
+//     position: relative;
+// } 
+
+// .content-f98 .login-xea  { 
+//     flex-basis: 100%;
+// } 
+
+// @media (min-width: 992px){ 
+//   .content-f98 .login-xea  { 
+//     flex-basis: 65%;
+//   } 
+// }     
+
+// @media (min-width: 768px){ 
+//   .content-f98 .login-xea::after, .content-f98 .login-xea::before { 
+//     content: ''; 
+//     background-image: url(https://displate.com/img/login/register_pattern1.png); 
+//     transform: rotate(90deg); 
+//     background-size: contain; 
+//     height: 600px; 
+//     width: 420px; 
+//     position: absolute; 
+//     z-index: -1;
+//   } 
+
+//   .content-f98 .login-xea::before { 
+//     top: -177px; 
+//     left: calc(50% - 221px);
+//   } 
+
+//   .content-f98 .login-xea::after { 
+//     bottom: -179px; 
+//     left: calc(50% - 221px);
+//   } 
+// }     
+
+// .content-f98 .info-fkd  { 
+//     color: #000; 
+//     background-color: #fff; 
+//     text-align: left; 
+//     flex-basis: 100%; 
+//     box-shadow: 0 0 35px rgba(0,0,0,.2); 
+//     padding: 30px 15px 20px; 
+//     position: relative; 
+//     margin-bottom: -15px;
+// } 
+
+// @media (min-width: 992px){ 
+//   .content-f98 .info-fkd  { 
+//     flex-basis: 33%; 
+//     margin-bottom: initial;
+//   } 
+// }     
+
+// @media (min-width: 1200px){ 
+//   .content-f98 .info-fkd::before, .content-f98 .wrapper-info::before { 
+//     content: ''; 
+//     background-image: url(https://displate.com/img/login/register_pattern2.png); 
+//     background-size: contain; 
+//     height: 324px; 
+//     width: 231px; 
+//     position: absolute; 
+//     z-index: -1; 
+//     bottom: -80px; 
+//     right: -50px;
+//   } 
+// }     
+
+// .text-l93 { 
+//     text-align: center;
+// } 
+
+// .py--k9o { 
+//     padding-top: 24px; 
+//     padding-bottom: 24px;
+// } 
+
+// @media (min-width: 992px){ 
+//   .py--k9o { 
+//     padding-top: 36px; 
+//     padding-bottom: 36px;
+//   } 
+// }     
+
+// .content-f98 .title-k5w  { 
+//     background: #fff; 
+//     border-bottom: 1px solid #d2d2d2;
+// } 
+
+// form { 
+//     margin: 0; 
+//     padding: 0; 
+//     border: 0;
+// } 
+
+// form { 
+//     margin: 0px; 
+//     padding: 0px; 
+//     border: 0px; 
+//     font: inherit; 
+//     vertical-align: baseline;
+// } 
+
+// .content-f98 .login-xea #log-1ar  { 
+//     background-color: #f5f5f5; 
+//     padding: 30px 15px;
+// } 
+
+// @media (min-width: 786px){ 
+//   .content-f98 .login-xea #log-1ar  { 
+//     margin: 30px auto; 
+//     width: 40%;
+//   } 
+// }     
+
+// @media (min-width: 992px){ 
+//   .content-f98 .login-xea #log-1ar  { 
+//     padding: 0;
+//   } 
+// }     
+
+// h3 { 
+//     font-family: proxima-nova,Corbel,Arial,sans-serif; 
+//     font-weight: 600; 
+//     color: #000; 
+//     margin: 0;
+// } 
+
+// h3 { 
+//     font-size: 20px; 
+//     line-height: 28px;
+// } 
+
+// @media (min-width: 992px){ 
+//   h3 { 
+//     font-size: 28px; 
+//     line-height: 36px;
+//   } 
+// }     
+
+// h3 { 
+//     margin: 0; 
+//     padding: 0; 
+//     border: 0;
+// } 
+
+// h3 { 
+//     margin: 0px; 
+//     padding: 0px; 
+//     border: 0px; 
+//     font: inherit; 
+//     vertical-align: baseline;
+// } 
+
+// .heading-fnq { 
+//     font-size: 16px; 
+//     line-height: 24px;
+// } 
+
+// @media (min-width: 992px){ 
+//   .heading-fnq { 
+//     font-size: 22px; 
+//     line-height: 30px;
+//   } 
+// }     
+
+// .heading-h1r { 
+//     font-size: 16px; 
+//     line-height: 24px;
+// } 
+
+// @media (min-width: 992px){ 
+//   .heading-h1r { 
+//     font-size: 16px; 
+//     line-height: 24px;
+//   } 
+// }     
+
+// .content-f98 .info-fkd .heading-h1r  { 
+//     font-weight: 500; 
+//     margin-bottom: 20px;
+// } 
+
+// .content-f98 .info-fkd .info-23z  { 
+//     margin: 10px 1px; 
+//     padding: 12px 10px; 
+//     position: relative; 
+//     border-top: 1px solid #d2d2d2;
+// } 
+
+// @media (min-width: 992px){ 
+//   .content-f98 .info-fkd .info-23z:hover { 
+//     border: none; 
+//     padding-top: 13px; 
+//     box-shadow: 4px 4px 12px rgba(0,0,0,.2);
+//   } 
+// }     
+
+// h2 { 
+//     font-family: proxima-nova,Corbel,Arial,sans-serif; 
+//     font-weight: 600; 
+//     color: #000; 
+//     margin: 0;
+// } 
+
+// h2 { 
+//     margin: 0; 
+//     padding: 0; 
+//     border: 0;
+// } 
+
+// h2 { 
+//     margin: 0px; 
+//     padding: 0px; 
+//     border: 0px; 
+//     font: inherit; 
+//     vertical-align: baseline;
+// } 
+
+// h2,.heading-1mq { 
+//     font-size: 24px; 
+//     line-height: 32px;
+// } 
+
+// @media (min-width: 992px){ 
+//   h2,.heading-1mq { 
+//     font-size: 36px; 
+//     line-height: 44px;
+//   } 
+// }     
+
+// input { 
+//     font-family: inherit; 
+//     font-size: 100%; 
+//     line-height: 1.15; 
+//     margin: 0;
+// } 
+
+// input { 
+//     overflow: visible;
+// } 
+
+// input { 
+//     font-variant-numeric: lining-nums; 
+//     font-feature-settings: 'lnum' on; 
+//     -webkit-font-feature-settings: 'lnum' on; 
+//     -moz-font-feature-settings: 'lnum' on;
+// } 
+
+// input { 
+//     font-family: inherit;
+// } 
+
+// .mt--b9o { 
+//     margin-top: 10px;
+// } 
+
+// @media (min-width: 992px){ 
+//   .mt--b9o { 
+//     margin-top: 15px;
+//   } 
+// }     
+
+// hr { 
+//     border: none; 
+//     border-top: 1px solid #d2d2d2; 
+//     margin: 15px auto; 
+//     width: 100%;
+// } 
+
+// hr { 
+//     box-sizing: content-box; 
+//     height: 0; 
+//     overflow: visible;
+// } 
+
+// hr { 
+//     border: 0; 
+//     border-top: 1px solid #eee;
+// } 
+
+// .content-f98 .login-xea .wrapper-he4  { 
+//     justify-content: space-between; 
+//     margin-top: 15px;
+// } 
+
+// @media (min-width: 768px){ 
+//   .content-f98 .captcha-fom  { 
+//     margin: 0 auto;
+//   } 
+// }     
+
+// p { 
+//     margin: 0; 
+//     padding: 0; 
+//     border: 0;
+// } 
+
+// p { 
+//     margin: 0px; 
+//     padding: 0px; 
+//     border: 0px; 
+//     font: inherit; 
+//     vertical-align: baseline;
+// } 
+
+// .hid-nwn { 
+//     display: none!important;
+// } 
+
+// .hid-nwn { 
+//     display: none;
+// } 
+
+// button { 
+//     font-family: inherit; 
+//     font-size: 100%; 
+//     line-height: 1.15; 
+//     margin: 0;
+// } 
+
+// button { 
+//     overflow: visible;
+// } 
+
+// button { 
+//     text-transform: none;
+// } 
+
+// button { 
+//     font-variant-numeric: lining-nums; 
+//     font-feature-settings: 'lnum' on; 
+//     -webkit-font-feature-settings: 'lnum' on; 
+//     -moz-font-feature-settings: 'lnum' on;
+// } 
+
+// button { 
+//     padding: 0; 
+//     border: none; 
+//     background: 0 0; 
+//     appearance: none;
+// } 
+
+// button { 
+//     font-family: inherit;
+// } 
+
+// .button-trd { 
+//     font-family: proxima-nova,Corbel,Arial,sans-serif; 
+//     font-weight: 600; 
+//     box-shadow: 2px 2px 6px rgba(0,0,0,.2); 
+//     transition: box-shadow .3s ease,background-image .3s ease; 
+//     border: none; 
+//     border-radius: 4px; 
+//     cursor: pointer; 
+//     outline: 0; 
+//     text-align: center; 
+//     text-decoration: none; 
+//     -webkit-appearance: none; 
+//     font-size: 16px; 
+//     line-height: 20px; 
+//     padding: 12px 20px; 
+//     width: 100%;
+// } 
+
+// @media (min-width: 992px){ 
+//   .button-trd { 
+//     font-size: 18px; 
+//     line-height: 26px; 
+//     width: auto; 
+//     max-width: unset;
+//   } 
+// }     
+
+// .button-x3k { 
+//     background: #1185ed; 
+//     color: #fff;
+// } 
+
+// button,[type="submit"] { 
+//     -webkit-appearance: button;
+// } 
+
+// button.button-vx6 { 
+//     flex-basis: 40%; 
+//     height: 40px; 
+//     padding: 0;
+// } 
+
+// .content-f98 .login-xea .wrapper-he4 .button-trd  { 
+//     width: 100%; 
+//     display: block; 
+//     margin-top: 10px; 
+//     height: 50px; 
+//     line-height: 35px;
+// } 
+
+// .button-x3k:active,.button-x3k:hover { 
+//     color: #fff; 
+//     text-decoration: none;
+// } 
+
+// .button-x3k:not(.button--no-hover):hover { 
+//     background-color: #0f76d4; 
+//     box-shadow: 4px 4px 12px rgba(0,0,0,.2);
+// } 
+
+// a { 
+//     font-family: proxima-nova,Corbel,Arial,sans-serif; 
+//     font-weight: 600; 
+//     color: #000; 
+//     text-decoration: none; 
+//     line-height: 24px; 
+//     cursor: pointer;
+// } 
+
+// a { 
+//     background-color: transparent;
+// } 
+
+// a { 
+//     margin: 0; 
+//     padding: 0; 
+//     border: 0;
+// } 
+
+// a { 
+//     margin: 0px; 
+//     padding: 0px; 
+//     border: 0px; 
+//     font: inherit; 
+//     vertical-align: baseline;
+// } 
+
+// .mt--6da { 
+//     margin-top: 6.66666667px;
+// } 
+
+// @media (min-width: 992px){ 
+//   .mt--6da { 
+//     margin-top: 10px;
+//   } 
+// }     
+
+// a.button-trd,.button-trd { 
+//     font-family: proxima-nova,Corbel,Arial,sans-serif; 
+//     font-weight: 600; 
+//     box-shadow: 2px 2px 6px rgba(0,0,0,.2); 
+//     transition: box-shadow .3s ease,background-image .3s ease; 
+//     border: none; 
+//     border-radius: 4px; 
+//     cursor: pointer; 
+//     outline: 0; 
+//     text-align: center; 
+//     text-decoration: none; 
+//     -webkit-appearance: none; 
+//     font-size: 16px; 
+//     line-height: 20px; 
+//     padding: 12px 20px; 
+//     width: 100%;
+// } 
+
+// @media (min-width: 992px){ 
+//   a.button-trd,.button-trd { 
+//     font-size: 18px; 
+//     line-height: 26px; 
+//     width: auto; 
+//     max-width: unset;
+//   } 
+// }     
+
+// a.button-7k2,.button-7k2 { 
+//     font-size: 16px; 
+//     line-height: 20px; 
+//     padding: 10px 20px;
+// } 
+
+// @media (min-width: 992px){ 
+//   a.button-7k2,.button-7k2 { 
+//     font-size: 16px; 
+//     padding: 8px 20px; 
+//     line-height: 24px;
+//   } 
+// }     
+
+// a.button-rlk,.button-rlk { 
+//     color: #fff; 
+//     background-color: #3b5998; 
+//     background-image: url(https://displate.com/img/icons/fb_button_sign.png); 
+//     background-position: 15px center; 
+//     background-repeat: no-repeat; 
+//     padding-left: 40px;
+// } 
+
+// a:hover { 
+//     color: #000; 
+//     text-decoration: underline;
+// } 
+
+// h6 { 
+//     font-family: proxima-nova,Corbel,Arial,sans-serif; 
+//     font-weight: 600; 
+//     color: #000; 
+//     margin: 0;
+// } 
+
+// h6 { 
+//     font-size: 16px; 
+//     line-height: 24px;
+// } 
+
+// @media (min-width: 992px){ 
+//   h6 { 
+//     font-size: 16px; 
+//     line-height: 24px;
+//   } 
+// }     
+
+// h6 { 
+//     margin: 0; 
+//     padding: 0; 
+//     border: 0;
+// } 
+
+// h6 { 
+//     margin: 0px; 
+//     padding: 0px; 
+//     border: 0px; 
+//     font: inherit; 
+//     vertical-align: baseline;
+// } 
+
+// ul { 
+//     margin: 0; 
+//     padding: 0; 
+//     border: 0;
+// } 
+
+// ul { 
+//     list-style: none;
+// } 
+
+// ul { 
+//     margin: 0px; 
+//     padding: 0px; 
+//     border: 0px; 
+//     font: inherit; 
+//     vertical-align: baseline;
+// } 
+
+// .text-ykw { 
+//     font-family: proxima-nova,Corbel,Arial,sans-serif; 
+//     font-weight: 300; 
+//     font-size: 16px; 
+//     line-height: 24px;
+// } 
+
+// .content-f98 .list-8dl  { 
+//     list-style: disc outside; 
+//     padding-left: 20px;
+// } 
+
+// .text-zhl { 
+//     font-size: 14px; 
+//     line-height: 22px;
+// } 
+
+// .link-o18,a { 
+//     font-family: proxima-nova,Corbel,Arial,sans-serif; 
+//     font-weight: 600; 
+//     color: #000; 
+//     text-decoration: none; 
+//     line-height: 24px; 
+//     cursor: pointer;
+// } 
+
+// .link-a4f { 
+//     color: #1185ed;
+// } 
+
+// .link-o18:visited,a:visited { 
+//     color: inherit; 
+//     outline: none;
+// } 
+
+// .link-a4f:visited { 
+//     color: #1185ed;
+// } 
+
+// .link-o18:hover,a:hover { 
+//     color: #000; 
+//     text-decoration: underline;
+// } 
+
+// .link-a4f:hover { 
+//     color: #1185ed;
+// } 
+
+// label { 
+//     margin: 0; 
+//     padding: 0; 
+//     border: 0;
+// } 
+
+// label { 
+//     margin: 0px; 
+//     padding: 0px; 
+//     border: 0px; 
+//     font: inherit; 
+//     vertical-align: baseline;
+// } 
+
+// .label-2ww { 
+//     font-family: proxima-nova,Corbel,Arial,sans-serif; 
+//     font-weight: 300; 
+//     display: block; 
+//     padding: 0 0 6px; 
+//     text-align: left; 
+//     font-size: 16px; 
+//     color: #000;
+// } 
+
+// @media (min-width: 992px){ 
+//   .label-2ww { 
+//     padding: 0 0 10px;
+//   } 
+
+//   .content-f98 .login-xea #log-1ar label  { 
+//     padding: 7px 0 13px;
+//   } 
+// }     
+
+// .input-z29 { 
+//     appearance: none; 
+//     border: 1px solid #d2d2d2; 
+//     border-radius: 4px; 
+//     padding: 8px 12px; 
+//     font-family: proxima-nova,Corbel,Arial,sans-serif; 
+//     font-weight: 300; 
+//     font-size: 16px; 
+//     line-height: 22px; 
+//     transition: box-shadow .3s ease; 
+//     outline: 0; 
+//     width: 100%;
+// } 
+
+// .content-f98 .login-xea .forgot-ttq  { 
+//     display: block; 
+//     text-align: left; 
+//     margin: 10px 0;
+// } 
+
+// li { 
+//     margin: 0; 
+//     padding: 0; 
+//     border: 0;
+// } 
+
+// li { 
+//     margin: 0px; 
+//     padding: 0px; 
+//     border: 0px; 
+//     font: inherit; 
+//     vertical-align: baseline;
+// } 
+
+// .content-f98 .list-8dl li  { 
+//     margin: 7px 0;
+// } 
+
+// iframe { 
+//     margin: 0; 
+//     padding: 0; 
+//     border: 0;
+// } 
+
+// iframe { 
+//     margin: 0px; 
+//     padding: 0px; 
+//     border: 0px; 
+//     font: inherit; 
+//     vertical-align: baseline;
+// } 
+
+// textarea { 
+//     font-family: inherit; 
+//     font-size: 100%; 
+//     line-height: 1.15; 
+//     margin: 0;
+// } 
+
+// textarea { 
+//     overflow: auto;
+// } 
+
+// textarea { 
+//     font-variant-numeric: lining-nums; 
+//     font-feature-settings: 'lnum' on; 
+//     -webkit-font-feature-settings: 'lnum' on; 
+//     -moz-font-feature-settings: 'lnum' on;
+// } 
+
+// textarea { 
+//     font-family: inherit;
+// } 
+
+
+// /* These were inline style tags. Uses id+class to override almost everything */
+// #style-AGbln.style-AGbln {  
+//    width: 304px;  
+//     height: 78px;  
+// }  
+// #g-r-t4w.style-qpy5z {  
+//    width: 250px;  
+//     height: 40px;  
+//     border: 1px solid rgb(193, 193, 193);  
+//     margin: 10px 25px;  
+//     padding: 0px;  
+//     resize: none;  
+//     display: none;  
+// }  
+// #style-W3P5L.style-W3P5L {  
+//    display: none;  
+// }  

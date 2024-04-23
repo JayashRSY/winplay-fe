@@ -1,0 +1,47 @@
+<div class="container">
+    <h1>Cart</h1>
+    <div class="mb-3">
+        <button class="btn btn-danger"
+            (click)="emptyCart()">Empty Cart</button>
+        <button class="btn btn-success ms-3"
+            (click)="buyNow()">Buy Now</button>
+    </div>
+    <div *ngIf="cartItems.length > 0 else emptyCartTemplate"
+        class="row">
+        <div *ngFor="let item of cartItems"
+            class="cart-item">
+            <div class="card">
+                <img [src]="item.product.url"
+                    class="card-img-top"
+                    alt="Poster Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.product.title }}</h5>
+                    <p class="card-text">{{ item.product.description }}</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary"
+                                type="button"
+                                (click)="decreaseQuantity(item)">-</button>
+                        </div>
+                        <input type="text"
+                            class="form-control"
+                            [value]="item.quantity"
+                            readonly>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary"
+                                type="button"
+                                (click)="increaseQuantity(item)">+</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-danger"
+                        (click)="removeFromCart(item)">Remove from Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <ng-template #emptyCartTemplate>
+        <p>Your cart is empty.</p>
+    </ng-template>
+
+</div>

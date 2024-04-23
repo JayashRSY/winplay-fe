@@ -1,0 +1,23 @@
+.color-container {
+  width: 100%;
+  .col-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 100%;
+    color: white;
+    font-weight: 900;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  .red-btn {
+    background-color: red;
+  }
+  .blue-btn {
+    background-color: blue;
+  }
+  .green-btn {
+    background-color: green;
+  }
+}

@@ -1,0 +1,43 @@
+<div class="container">
+    <mat-card class="wallet-card">
+        <mat-card-header>
+            <mat-card-title>Wallet Balance</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <h1 class="balance"
+                *ngIf="loginData$ | async as loginData">
+                <strong>₹{{loginData.walletBalance}}</strong>
+            </h1>
+            <button mat-raised-button
+                color="accent"
+                routerLink="/withdraw">Withdraw</button>
+            <button mat-raised-button
+                class="ms-2"
+                color="primary"
+                routerLink="/recharge">Deposit</button>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<mat-card class="my-3 p-3">
+    <div class="h1"
+        class="text-center"> Period Number - {{activePeriod?.periodNumber}}</div>
+    <div class="countdown-timer">
+        <div class="timer">
+            <mat-icon>schedule</mat-icon>
+            <span> 00:{{ transformTimer(periodTimer) }}</span>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <h2 class="text-center">Bid your color</h2>
+    <div class="color-wrapper">
+        <div class="color-container">
+            <div class="col-div red-btn"
+                (click)="openDialog('red')">RED</div>
+        </div>
+        <div class="color-container">
+            <div class="col-div blue-btn"
+                (click)="openDialog('blue')">BLUE</div>
+        </div>
+    </div>
+</mat-card>

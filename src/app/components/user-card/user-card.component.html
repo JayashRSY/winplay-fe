@@ -1,0 +1,17 @@
+<div class="our-team">
+    <div class="picture">
+        <img class="img-fluid"
+            [src]="user.profilePicture" />
+    </div>
+    <div class="team-content">
+        <h3 class="name">{{user.username}}</h3>
+        <h4 class="title">{{user.email}}</h4>
+    </div>
+    <div class="row">
+        <div class="col capsule">{{user.role}}</div>
+    </div>
+    <ul class="social">
+        <li title="Edit"><mat-icon>edit</mat-icon></li>
+        <li title="Delete"><mat-icon>delete_forever</mat-icon></li>
+    </ul>
+</div>

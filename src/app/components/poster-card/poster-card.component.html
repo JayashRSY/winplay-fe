@@ -1,0 +1,18 @@
+<div class="poster-container">
+    <div (click)="onAddToWishlist(poster)" class="fav-btn">
+        <mat-icon>favorite_border</mat-icon>
+    </div>
+    <!-- <mat-icon>favorite</mat-icon> -->
+    <!-- data-tilt-glare -->
+    <!-- data-tilt-max-glare="0.8" -->
+    <div data-tilt
+        data-tilt-scale="1.1"
+        class="tilt-zone">
+        <img [src]="poster.url"
+            alt="Poster Image"
+            class="poster-image">
+    </div>
+    <span (click)="onAddToCart(poster)" class="cart-btn">
+        <mat-icon>add_shopping_cart</mat-icon>
+        Add to cart</span>
+</div>

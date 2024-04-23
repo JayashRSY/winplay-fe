@@ -1,0 +1,58 @@
+<!-- requests.component.html -->
+<ng-container *ngIf="requests">
+    <mat-card *ngFor="let request of requests"
+        class="m-1 py-1 text-center">
+        <mat-card-title class="mat-card-title">{{ request.type | uppercase}}</mat-card-title>
+        <mat-divider></mat-divider>
+        <mat-card-content class="mt-1 d-flex justify-content-between">
+            <div>
+                <strong>Amount:</strong>
+                <div>{{ request.amount }}
+                </div>
+            </div>
+            <ng-container *ngIf="request.type==='deposit'">
+                <div>
+                    <strong>Payment Id:</strong>
+                    <div>{{ request.paymentId }}</div>
+                </div>
+                <div>
+                    <strong>UPI ID:</strong>
+                    <div>{{ request.upiId }}</div>
+                </div>
+            </ng-container>
+            <div class="d-flex flex-column"><strong>Date:</strong> {{ request.createdAt | date }}</div>
+
+            <div class="d-flex flex-column"><strong>Status:</strong>
+                <span *ngIf="request.status === 'pending'; else statusText"
+                    class="underline">
+                    {{ request.status }}
+                </span>
+                <ng-template #statusText>
+                    <mat-icon *ngIf="request.status === 'accepted'"
+                        class="status-icon">done</mat-icon>
+                    <mat-icon *ngIf="request.status === 'rejected'"
+                        class="status-icon">clear</mat-icon>
+                    <span class="bold">{{ request.status }}</span>
+                </ng-template>
+            </div>
+            <!-- Add more fields as needed -->
+        </mat-card-content>
+        <mat-card-actions class="d-flex justify-content-end">
+            <button mat-button
+                color="warn"
+                (click)="rejectRequest(request)"
+                *ngIf="request.status === 'pending'">
+                <mat-icon>thumb_down</mat-icon>
+                Reject
+            </button>
+            <button mat-button
+                color="primary"
+                (click)="acceptRequest(request)"
+                *ngIf="request.status === 'pending'">
+                <mat-icon>thumb_up</mat-icon>
+                Accept
+            </button>
+
+        </mat-card-actions>
+    </mat-card>
+</ng-container>

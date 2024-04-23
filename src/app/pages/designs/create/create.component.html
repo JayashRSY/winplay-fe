@@ -1,0 +1,84 @@
+<ngx-dropzone (change)="onSelect($event)"
+    accept="image/jpeg,image/jpg,image/png,image/gif"
+    [maxFileSize]="1024 * 1024 * 3"
+    [expandable]="true">
+    <ngx-dropzone-label>Drop it, baby!</ngx-dropzone-label>
+    <ngx-dropzone-preview *ngFor="let f of files"
+        [removable]="true"
+        (removed)="onRemove(f)">
+        <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+    </ngx-dropzone-preview>
+</ngx-dropzone>
+<button mat-raised-button
+    color="primary"
+    class="m-2"
+    (click)="uploadFiles()">Upload</button>
+<form [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+    class="d-flex flex-column card">
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput
+            type="text"
+            formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput
+            type="text"
+            formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Theme</mat-label>
+        <input matInput
+            type="text"
+            formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Medium</mat-label>
+        <input matInput
+            type="text"
+            formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Genre</mat-label>
+        <input matInput
+            type="text"
+            formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Period</mat-label>
+        <input matInput
+            type="text"
+            formControlName="name">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Brand</mat-label>
+        <input matInput
+            type="text"
+            formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Color</mat-label>
+        <input matInput
+            type="text"
+            formControlName="artist">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Artist</mat-label>
+        <input matInput
+            type="text"
+            formControlName="artist">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Tags</mat-label>
+        <input matInput
+            type="text"
+            formControlName="artist">
+    </mat-form-field>
+    <button mat-raised-button
+        color="primary"
+        class="m-2"
+        type="submit">Create</button>
+</form>

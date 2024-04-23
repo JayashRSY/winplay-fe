@@ -1,0 +1,21 @@
+<!-- user-list.component.html -->
+<mat-list>
+    <mat-list-item *ngFor="let user of users">
+        <img matListAvatar
+            [src]="user.profilePicture"
+            alt="User Avatar">
+        <h3 matLine>{{ user.username }}</h3>
+        <p matLine>Email: {{ user.email }}</p>
+        <p matLine
+            *ngIf="user.mobile">Mobile: {{ user.mobile }}</p>
+        <p matLine
+            *ngIf="user.upiId">UPI ID: {{ user.upiId }}</p>
+        <p matLine>Wallet Balance: {{ user.walletBalance }}</p>
+        <p matLine>Referral Count: {{ user.referralCount }}</p>
+        <p matLine
+            *ngIf="user.referredBy">Referred By: {{ user.referredBy }}</p>
+        <p matLine>Role: {{ user.role }}</p>
+    </mat-list-item>
+</mat-list>
+<div *ngIf="users.length<1"
+    class="text-center tex-muted">No Data</div>

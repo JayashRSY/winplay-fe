@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Wishlist</h1>
+    <div class="mb-3">
+        <button class="btn btn-danger"
+            (click)="emptyWishlist()">Empty Wishlist</button>
+    </div>
+    <div *ngIf="wishlistItems.length > 0 else emptyWishlistTemplate"
+        class="row">
+        <div *ngFor="let item of wishlistItems"
+            class="wishlist-item">
+            <div class="card">
+                <img [src]="item.url"
+                    class="card-img-top"
+                    alt="Poster Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <p class="card-text">{{ item.description }}</p>
+                    <button class="btn btn-danger"
+                        (click)="removeFromWishlist(item)">Remove from Wishlist</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <ng-template #emptyWishlistTemplate>
+        <p>Your wishlist is empty.</p>
+    </ng-template>
+
+</div>

@@ -1,0 +1,66 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  color: #3f51b5;
+  text-align: center;
+}
+
+.refer-card {
+  background-color: #f8bbd0;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.card-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  color: #3f51b5;
+}
+
+.card-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.signup-btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  background-color: #ff9800;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.signup-btn:hover {
+  background-color: #ffab40;
+}
+
+.referral-codes {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.code-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.code {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  background-color: #ff9800;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 10px;
+}

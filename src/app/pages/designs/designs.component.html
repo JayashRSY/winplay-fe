@@ -1,0 +1,16 @@
+<p>designs works!</p>
+<li class="btn btn-primary"
+    routerLink="/designs/create">Create</li>
+
+<div class="card-container">
+    <div class="card"
+        *ngFor="let design of designs">
+        <img [src]="design.url"
+            alt="Design design"
+            style="width: 200px; height: 300px;">
+        <div class="card-body">
+            <h5 class="card-title">{{ design.title }}</h5>
+            <p class="card-text">{{ design.description }}</p>
+        </div>
+    </div>
+</div>

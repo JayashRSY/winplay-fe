@@ -1,0 +1,48 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+.color-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  .color-container {
+    width: 100%;
+    .col-div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 5rem;
+      width: 100%;
+      color: white;
+      font-weight: 900;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+    .red-btn {
+      background-color: red;
+    }
+    .blue-btn {
+      background-color: blue;
+    }
+    .green-btn {
+      background-color: green;
+    }
+  }
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.timer {
+  font-size: 3rem;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
